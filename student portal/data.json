@@ -1,0 +1,35 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "student_name": "stude",
+      "father_name": "fathe",
+      "cnic": "1234",
+      "D_O_B": "1-2-5",
+      "email": "pakistani@techpark.com",
+      "phone_number": "098764322"
+    },
+    {
+      "student_name": "gisek57794",
+      "father_name": "asd",
+      "Enter your roll Number": "23",
+      "D_O_B": "3123",
+      "cnic": "dasd",
+      "email": "gisek57794@cristout.com",
+      "phone_number": "3123",
+      "course": "sdad",
+      "deleted_at": null
+    },
+    {
+      "student_name": "das",
+      "father_name": "das",
+      "id": "213",
+      "D_O_B": "23",
+      "cnic": "213",
+      "email": "radefe2443@ethsms.com",
+      "phone_number": "dsa",
+      "course": "asd",
+      "deleted_at": null
+    }
+  ]
+}

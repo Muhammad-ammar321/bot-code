@@ -1,0 +1,42 @@
+
+<%- include('partials/head')%>
+<link rel="stylesheet" href="/styles/dashboard.css">
+
+<body class="box">
+    <main>
+        <h1>Student List</h1>
+        <a href="/register" class="btn">Add New Student</a>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(function(student, index) { %>
+                    <tr>
+                        <td><%= student.id %></td>
+                        <td><%= student.student_name %></td>
+                        <td><%= student.course || "N/A" %></td>
+                        <td>
+                            <a href="/student/<%= student.id %>/edit">
+                                <img src="https://img.icons8.com/ios-glyphs/24/edit--v1.png" alt="Edit" />
+                            </a>
+                            <form action="/student/<%= student.id %>?_method=DELETE" method="POST" style="display:inline;">
+                                <button type="submit" style="background:none;border:none;">
+                                    <img src="https://img.icons8.com/ios-glyphs/24/trash--v1.png" alt="Delete" />
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+   <%- include('partials/footer')%>
+   

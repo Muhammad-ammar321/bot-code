@@ -1,0 +1,38 @@
+
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/styles/register.css">
+
+<body class="box">
+  <main>
+    <h1>Edit Student</h1>
+    <form action="/student/<%= student.id %>?_method=PUT" method="POST">
+      <label for="student_name">Name:</label>
+      <input type="text" name="student_name" value="<%= student.student_name %>" required />
+
+      <label for="father_name">Father's Name:</label>
+      <input type="text" name="father_name" value="<%= student.father_name %>" required />
+
+      <label for="id">ID:</label>
+      <input type="text" name="id" value="<%= student.id %>" readonly />
+
+      <label for="D_O_B">Date of Birth:</label>
+      <input type="date" name="D_O_B" value="<%= student.D_O_B %>" required />
+
+      <label for="cnic">CNIC / B-form:</label>
+      <input type="text" name="cnic" value="<%= student.cnic %>" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" value="<%= student.email %>" required />
+
+      <label for="phone_number">Phone Number:</label>
+      <input type="text" name="phone_number" value="<%= student.phone_number %>" required />
+
+      <label for="course">Course:</label>
+      <input type="text" name="course" value="<%= student.course %>" required />
+
+      <button type="submit">Update</button>
+    </form>
+  </main>
+</body>
+   <%- include('partials/footer')%>
+   
